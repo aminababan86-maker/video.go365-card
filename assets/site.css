@@ -125,8 +125,7 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr);
   gap: 24px;
   margin-top: 26px;
 }
@@ -176,53 +175,11 @@ a {
   max-width: 58ch;
 }
 
-.hero-side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-side h2 {
-  margin: 16px 0 0;
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
-  letter-spacing: -0.03em;
-}
-
 .action-row {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
-}
-
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.stat-card {
-  padding: 18px;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: var(--shadow-soft);
-}
-
-.stat-card strong {
-  display: block;
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.stat-card span {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-weight: 800;
 }
 
 .button {
@@ -283,10 +240,6 @@ a {
   gap: 18px;
 }
 
-.card-grid.three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .card-grid.two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -334,31 +287,6 @@ a {
   line-height: 1.8;
 }
 
-.bullet-list {
-  display: grid;
-  gap: 14px;
-  margin: 24px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.bullet-list li {
-  position: relative;
-  padding-left: 24px;
-  font-weight: 700;
-}
-
-.bullet-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
-}
-
 .video-card {
   overflow: hidden;
 }
@@ -391,27 +319,6 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
-}
-
-.mini-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.mini-card {
-  padding: 24px;
-}
-
-.mini-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-}
-
-.mini-card p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.8;
 }
 
 .link-card {
@@ -485,9 +392,7 @@ a {
 
 @media (max-width: 900px) {
   .hero,
-  .card-grid.two,
-  .card-grid.three,
-  .mini-grid {
+  .card-grid.two {
     grid-template-columns: 1fr;
   }
 
@@ -528,9 +433,5 @@ a {
 
   .video-frame {
     padding: 12px;
-  }
-
-  .stat-grid {
-    grid-template-columns: 1fr;
   }
 }
